@@ -10,8 +10,6 @@ public class Atm {
     AtmInside user1 = new AtmInside();
     AtmInside user2 = new AtmInside(30,30,30);
     user1.setMoney();
-
-
     user2.getMoney();
     user1.takeMoney();
     user1.getMoney();

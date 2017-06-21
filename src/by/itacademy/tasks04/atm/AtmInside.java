@@ -11,10 +11,10 @@ public class AtmInside {
     private static int countOfNote20;
     private static int countOfNote50;
     private static int countOfNote100;
-    private static int cash = 0;
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    //private static int cash = 0;
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));   //вопрос об создании объекта для ввода!!!
 
-
+    //вопрос об использовании throw IOExeption
     public void setMoney() throws IOException {
         int countOfNote20;
         int countOfNote50;
@@ -106,6 +106,7 @@ public class AtmInside {
 
 
     }
+    //вопрос о конструкторах.
     AtmInside(int countOfNote20, int countOfNote50, int countOfNote100){
         this.countOfNote20=countOfNote20;
         this.countOfNote50=countOfNote50;
