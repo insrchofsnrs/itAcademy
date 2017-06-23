@@ -10,7 +10,7 @@ public class Time {
         private int sec;
 
         public void getTimeInSeconds (){
-            System.out.println("Время в секундах равно: "+this.hour*24*60+this.min*60+this.sec);
+            System.out.println("Время в секундах равно: "+(this.hour*24*60+this.min*60+this.sec));
         }
 
         Time(int hour, int min, int sec){
