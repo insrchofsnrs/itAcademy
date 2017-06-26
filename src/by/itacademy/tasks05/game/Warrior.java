@@ -1,5 +1,7 @@
 package by.itacademy.tasks05.game;
 
+import java.util.Random;
+
 /**
  * Created by Evgeni on 23.06.17.
  */
@@ -30,8 +32,10 @@ public class Warrior extends Hero {
 
     @Override
     public void attackEnemy(Enemy enemy) {
-        enemy.takeDamage(strange);
-        System.out.println("Воин атакует противника нанося " + strange + " урона. У врага осталось " + enemy.getHealth() + " здоровья");
+        Random random = new Random();
+        int randomDamage = random.nextInt(strange)+strange/2;
+        enemy.takeDamage(randomDamage);
+        System.out.println("Воин атакует противника нанося " + randomDamage + " урона. У врага осталось " + enemy.getHealth() + " здоровья");
     }
 
     Warrior() {
@@ -42,8 +46,9 @@ public class Warrior extends Hero {
         return health;
     }
 
-    Warrior(String name, int health) {
+    Warrior(String name, int health, int strange) {
         this.name = name;
         this.health=health;
+        this.strange=strange;
     }
 }

@@ -17,8 +17,7 @@ public class Enemy implements Mortal {
     }
 
     public void attackEnemy(Hero hero) {
-        hero.takeDamage(strange);
-        System.out.println("Враг наносит " + strange + " урона. У героя осталось " + hero.getHealth() + " здоровья");
+
     }
 
     public int getHealth() {
