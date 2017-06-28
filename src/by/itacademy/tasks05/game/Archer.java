@@ -6,10 +6,8 @@ import java.util.Random;
  * Created by Evgeni on 23.06.17.
  */
 public class Archer extends Hero {
+    int strange2;
 
-    private String name;
-    private int strange = 1;
-    private int health;
 
     @Override
     public String getName() {
@@ -38,10 +36,17 @@ public class Archer extends Hero {
 
     @Override
     public void attackEnemy(Enemy enemy) {
+        //ВОПРОС О РЕЗЕВРНЫХ ПЕРЕМЕННЫХ
         Random random = new Random();
-        int randomDamage = random.nextInt(strange);
+        int chance = random.nextInt(3)+1;
+        if (chance==2){
+            System.out.println("Лучник сконцентрировался. (Урон увеличен x2)");
+            this.strange=strange*2;
+        }
+        int randomDamage = random.nextInt(strange/2)+strange/2;
         enemy.takeDamage(randomDamage);
         System.out.println("Лучник атакует противника нанося " + randomDamage + " урона. У врага осталось " + enemy.getHealth() + " здоровья");
+        this.strange=this.strange2;
     }
 
     Archer() {
@@ -52,5 +57,6 @@ public class Archer extends Hero {
         this.name = name;
         this.health=health;
         this.strange=strange;
+        this.strange2=strange;
     }
 }

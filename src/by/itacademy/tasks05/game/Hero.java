@@ -4,8 +4,9 @@ package by.itacademy.tasks05.game;
  * Created by Evgeni on 23.06.17.
  */
 abstract class Hero {
-    private String name;
-    private int health;
+    String name;
+    int health;
+    int strange;
     public String getName() {
         return name;
     }

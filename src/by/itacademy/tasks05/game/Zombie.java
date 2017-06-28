@@ -46,22 +46,20 @@ public class Zombie extends Enemy implements Mortal {
         if (this.health > 0) {
             return true;
         } else if (this.health <= 0) {
-            Random random = new Random();
-            int chanse = random.nextInt(3);
 
-            switch (chanse) {
-                case 1:
-                case 2:
-                    break;
-                case 3:
-                    this.health = healthReserved;
-                    System.out.println("ЗОМБИ ВОСКРЕСАЕТ!!!");
+            Random random = new Random();
+            int chanсe = random.nextInt(2) + 1;
+            if (chanсe == 1) {
+                System.out.println("Зомби воскресает и восстанавливает всё ХП!");
+                this.health = healthReserved;
+                return true;
+            } else {
+                return false;
             }
-            return true;
+
         } else {
             return false;
         }
-
 
 
     }
@@ -69,10 +67,11 @@ public class Zombie extends Enemy implements Mortal {
     @Override
     public void attackEnemy(Hero hero) {
         Random random = new Random();
-        int randomDamage = random.nextInt(strange);
+        int randomDamage = random.nextInt(strange/2) + (strange / 2);
         hero.takeDamage(randomDamage);
 
-        System.out.println("Зомби наносит " + randomDamage + " урона. У врага осталось " + hero.getHealth() + " здоровья");
+        System.out.println("Зомби наносит " + randomDamage + " урона. У героя осталось " + hero.getHealth() + " здоровья");
+        System.out.println("--------------------------------------------------------------------");
     }
 
     Zombie(String name, int health, int strange) {
