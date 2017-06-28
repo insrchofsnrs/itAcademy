@@ -8,7 +8,7 @@ import java.math.BigInteger;
 public class Start {
     public static void main(String[] args) {
         Task074 a = new Task074();
-        System.out.println(Task074.sum());
+        //System.out.println(Task074.sum());
 
     }
 }

@@ -14,11 +14,11 @@ T b;
 
 
 
-    public   <T extends BigInteger> Double  sum (T a,T b){
+   /* public   <T extends BigInteger> Double  sum (T a,T b){
 
 
-        return a.add(b);
+        //return a.add(b);
 
-    }
+    }*/
 }
 
