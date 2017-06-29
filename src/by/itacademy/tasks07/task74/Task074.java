@@ -6,10 +6,26 @@ import java.math.BigInteger;
 /**
  * Created by Evgeni on 28.06.17.
  */
-public class Task074<T> {
+public class Task074<T1, T2> {
+    public Task074(BigInteger d, BigInteger c) {
+        this.d = d;
+        this.c = c;
+    }
 
-T a;
-T b;
+    public Task074(T1 a, T2 b) {
+
+        this.a = a;
+        this.b = b;
+    }
+
+    T1 a;
+    T2 b;
+    BigInteger d = BigInteger.valueOf((Long) a);
+    BigInteger c = BigInteger.valueOf((Long) b);
+
+    public BigInteger sum(){
+        return d.add(c);
+    }
 
 
 
