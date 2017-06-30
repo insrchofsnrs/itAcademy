@@ -15,15 +15,13 @@ public class AnalyzerTransaction {
 
         for (Method method : methods) {
             if (method.isAnnotationPresent(Transaction.class)) {
-                try {
-                    System.out.println("Transaction is started!");
-                    method.invoke(null);
-                    System.out.println("Transaction is ended!");
+                Class cls = Class.forName(clazz.getName());
+                Object obj = cls.newInstance();
+                System.out.println("Star transaction");
+                method.invoke(obj);
+                System.out.println("End transaction");
 
-                } catch (Exception e) {
 
-                    System.out.println("что-то пошло не так");
-                }
             }
         }
     }
