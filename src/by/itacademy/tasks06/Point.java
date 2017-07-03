@@ -1,8 +1,11 @@
 package by.itacademy.tasks06;
 
+import lombok.Data;
+
 /**
  * Created by Evgeni on 29.06.17.
  */
+@Data
 public abstract class Point {
     double x;
     double x1;

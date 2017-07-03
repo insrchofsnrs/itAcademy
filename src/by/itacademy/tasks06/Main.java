@@ -15,7 +15,7 @@ public class Main {
         System.out.println(ShapeUtils.isRectangle(triangle));
         Shape circle = new Circle(0.0,10.0,10.1);
         System.out.println(circle.toString());
-
+        System.out.println(triangle.getX());
 
     }
 }
