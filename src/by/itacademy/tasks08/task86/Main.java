@@ -49,10 +49,11 @@ public class Main {
     }
     public static List<Integer> union (List<Integer> list1, List<Integer> list2){
         List<Integer> list3 = new ArrayList<>();
-        Set<Integer> set = new HashSet<>();
-        set.addAll(list1);
+        list3.addAll(list1);
 
-        set.addAll(list2);
+        list3.addAll(list2);
+        Set<Integer> set = new HashSet<>(list3);
+
         return list3;
 
     }
