@@ -28,7 +28,6 @@ public class Main {
         while(listIterator.hasNext()){
             if(listIterator.next()>listIterator.previous()){
                 it = listIterator.next();
-
             }
 
 
