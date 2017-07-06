@@ -37,7 +37,7 @@ public class Task84 {
 
         }
 
-
+        //ах вот как оно оказывается просто всё выводится:)
         System.out.println("Вывод значений: " + hashMap.entrySet());
 
 
