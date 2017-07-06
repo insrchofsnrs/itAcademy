@@ -13,21 +13,30 @@ import java.util.Map;
 public class Task84 {
     public static void task84() throws IOException {
 
-        try {
-            //считываю из файла
-            BufferedReader reader = new BufferedReader(new FileReader("text.txt"));
-            Map<String , Integer> hashMap = new HashMap<>();
-            //создаю массив из слов
-            String[] splitedText = reader.readLine().split(" ");
-            //заполняю мапу словами и значением, где слова - ключи
-            for (int i = 0; i < splitedText.length; i++) {
-                hashMap.put(splitedText[i],   );
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
+
+        //считываю из файла
+        BufferedReader reader = new BufferedReader(new FileReader("d://text.txt"));
+        Map<String, Integer> hashMap = new HashMap<>();
+
+
+        //создаю массив слов разделенных
+        String[] splitedText = reader.readLine().toLowerCase().split("\\p{P}?[ \\t\\n\\r]+");
+        for (int i = 0; i < splitedText.length; i++) {
+            System.out.println(splitedText[i]);
         }
+        //заполняю мапу словами и значением, где слова - ключи
 
+        for (int i = 0; i < splitedText.length; i++) {
+            if (hashMap.get(splitedText[i]) != null) {
+                hashMap.put(splitedText[i], hashMap.get(splitedText)+1);
+            } else {
+                hashMap.put(splitedText[i], 1);
+            }
 
+        }
+        for (int j = 0; j < hashMap.size(); j++) {
+            hashMap.values();
+        }
 
 
     }
