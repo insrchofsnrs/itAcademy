@@ -5,12 +5,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
  * Created by Evgeni on 05.07.17.
  */
 public class Task84 {
+    public static void main(String[] args) throws IOException {
+        task84();
+    }
+
     public static void task84() throws IOException {
 
 
@@ -21,22 +26,19 @@ public class Task84 {
 
         //создаю массив слов разделенных
         String[] splitedText = reader.readLine().toLowerCase().split("\\p{P}?[ \\t\\n\\r]+");
-        for (int i = 0; i < splitedText.length; i++) {
-            System.out.println(splitedText[i]);
-        }
-        //заполняю мапу словами и значением, где слова - ключи
+
 
         for (int i = 0; i < splitedText.length; i++) {
             if (hashMap.get(splitedText[i]) != null) {
-                hashMap.put(splitedText[i], hashMap.get(splitedText)+1);
+                hashMap.put(splitedText[i], hashMap.get(splitedText[i]) + 1);
             } else {
                 hashMap.put(splitedText[i], 1);
             }
 
         }
-        for (int j = 0; j < hashMap.size(); j++) {
-            hashMap.values();
-        }
+
+
+        System.out.println("Вывод значений: " + hashMap.entrySet());
 
 
     }
