@@ -18,7 +18,8 @@ public class Task84 {
 
     public static void task84() throws IOException {
 
-
+        System.out.println("=====================================================");
+        System.out.println("Задача 4: \n Словарь. Файл с текстом на диске D:.");
         //считываю из файла
         BufferedReader reader = new BufferedReader(new FileReader("d://text.txt"));
         Map<String, Integer> hashMap = new HashMap<>();

@@ -9,8 +9,11 @@ import java.util.Random;
 /**
  * Created by Evgeni on 05.07.17.
  */
-public class Main {
-    public static void main(String[] args) {
+public class Task87 {
+    public static void task87() {
+        System.out.println("=========================================");
+        System.out.println("Задание 7:\n" +
+                "вывести отрицательные значения в конце. ");
         Random random = new Random();
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
@@ -19,6 +22,7 @@ public class Main {
         }
         System.out.println(list);
         Collections.sort(list);
+
         Collections.reverse(list);
         System.out.println();
         System.out.println(list);

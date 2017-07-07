@@ -8,8 +8,11 @@ import java.util.Random;
 /**
  * Created by Smile on 04.07.17.
  */
-public class Main {
-    public static void main(String[] args) throws Exception {
+public class Task82 {
+
+    public static void task82() throws Exception {
+        System.out.println("=====================================================");
+        System.out.println("Задача 2: \n Список оценок. Вывести максимальный бал.");
         ArrayList<Integer> list = new ArrayList<>();
         Random random = new Random();
 
@@ -20,7 +23,7 @@ public class Main {
             System.out.print(list.get(i) + " | ");
         }
 
-        //создает и заполняет список, дальше не работает. Как сравнивать элементы в итераторе хз.
+
 
 
         Integer max = list.get(0);

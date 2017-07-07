@@ -8,8 +8,10 @@ import java.util.Stack;
 /**
  * Created by Smile on 04.07.17.
  */
-public class Main {
-    public static void main(String[] args) {
+public class Task85 {
+    public static void task85() {
+        System.out.println("=====================================================");
+        System.out.println("Задача 5: \n Вывод числа в обратном порядке. Число 12345");
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         Integer a = 12345;
 
@@ -22,6 +24,7 @@ public class Main {
         while (stack.peek() != null) {
             System.out.print(stack.pop());
         }
+        System.out.println();
 
 
     }

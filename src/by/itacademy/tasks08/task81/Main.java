@@ -5,8 +5,10 @@ import java.util.*;
 /**
  * Created by Evgeni on 05.07.17.
  */
-public class Main {
-    public static void main(String[] args) {
+class Task81 {
+    public static void task81() {
+        System.out.println("===================================");
+        System.out.println("Задание 1: \n Отсеять оценки");
         Random random = new Random();
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
@@ -23,6 +25,7 @@ public class Main {
                 iterator.remove();
             }
         }
+        System.out.println("Оценки выше 3 баллов.");
         System.out.println();
         System.out.println("-------------------------------------");
         while (iterator.hasPrevious()){
