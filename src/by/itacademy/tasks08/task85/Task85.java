@@ -15,7 +15,6 @@ public class Task85 {
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         Integer a = 12345;
 
-
         while (a > 0) {
             stack.add(a % 10);
             a /= 10;

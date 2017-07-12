@@ -1,5 +1,6 @@
 package by.itacademy.tasks08;
 
+import by.itacademy.tasks08.task81.Task81;
 import by.itacademy.tasks08.task82.Task82;
 import by.itacademy.tasks08.task83.Task83;
 import by.itacademy.tasks08.task84.Task84;
@@ -17,6 +18,7 @@ public class Start {
     public static void main(String[] args) throws Exception {
 
 
+        Task81.task81();
         Task82.task82();
 
         Task83.task83();
@@ -27,7 +29,7 @@ public class Start {
         System.out.println("=====================================================");
         System.out.println("Задача 8: \n BlackBox");
         Task88 blackBox = new Task88();
-        blackBox.addI(12);
+        blackBox.addI(13);
         blackBox.addI(1);
         blackBox.addI(2);
         blackBox.addI(12);

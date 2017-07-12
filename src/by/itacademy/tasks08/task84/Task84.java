@@ -12,34 +12,36 @@ import java.util.Map;
  * Created by Evgeni on 05.07.17.
  */
 public class Task84 {
-    public static void main(String[] args) throws IOException {
-        task84();
-    }
+
 
     public static void task84() throws IOException {
-
-        System.out.println("=====================================================");
-        System.out.println("Задача 4: \n Словарь. Файл с текстом на диске D:.");
-        //считываю из файла
-        BufferedReader reader = new BufferedReader(new FileReader("d://text.txt"));
-        Map<String, Integer> hashMap = new HashMap<>();
-
-
-        //создаю массив слов разделенных
-        String[] splitedText = reader.readLine().toLowerCase().split("\\p{P}?[ \\t\\n\\r]+");
+        try {
+            System.out.println("=====================================================");
+            System.out.println("Задача 4: \n Словарь. Файл с текстом на диске D:.");
+            //считываю из файла
+            BufferedReader reader = new BufferedReader(new FileReader("d://text.txt"));
+            Map<String, Integer> hashMap = new HashMap<>();
 
 
-        for (int i = 0; i < splitedText.length; i++) {
-            if (hashMap.get(splitedText[i]) != null) {
-                hashMap.put(splitedText[i], hashMap.get(splitedText[i]) + 1);
-            } else {
-                hashMap.put(splitedText[i], 1);
+            //создаю массив слов разделенных
+            String[] splitedText = reader.readLine().toLowerCase().split("\\p{P}?[ \\t\\n\\r]+");
+
+
+            for (int i = 0; i < splitedText.length; i++) {
+                if (hashMap.get(splitedText[i]) != null) {
+                    hashMap.put(splitedText[i], hashMap.get(splitedText[i]) + 1);
+                } else {
+                    hashMap.put(splitedText[i], 1);
+                }
+
             }
 
-        }
+            //ах вот как оно оказывается просто всё выводится:)
+            System.out.println("Вывод значений: " + hashMap.entrySet());
+        }catch (IOException e){
 
-        //ах вот как оно оказывается просто всё выводится:)
-        System.out.println("Вывод значений: " + hashMap.entrySet());
+            System.out.println("File not found.");
+        }
 
 
     }

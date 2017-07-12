@@ -1,6 +1,5 @@
 package by.itacademy.tasks08.task87;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +21,6 @@ public class Task87 {
         }
         System.out.println(list);
         Collections.sort(list);
-
         Collections.reverse(list);
         System.out.println();
         System.out.println(list);

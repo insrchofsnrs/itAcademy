@@ -12,7 +12,7 @@ import java.util.List;
 public class Task113 {
     public static void task113() {
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("d://text.txt")))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("text111.txt")))) {
             String a = null;
             //String[] splitedText = null;
 

@@ -10,7 +10,7 @@ import java.util.TreeSet;
  */
 public class Task106 {
     public static void task106(){
-        String strBuffer = new String("woorldd");
+        String strBuffer = new String("woorldd aaaddddsss");
 
         char[] buffer1 = strBuffer.toCharArray();
         //char[] buffer1 = new char[0-(strBuffer.length()-1)];

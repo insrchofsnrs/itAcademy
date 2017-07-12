@@ -7,7 +7,7 @@ import java.io.*;
  */
 public class Task114 {
     public static void task114() {
-        try (DataInputStream dis = new DataInputStream(new FileInputStream(new File("d://text1.txt")))) {
+        try (DataInputStream dis = new DataInputStream(new FileInputStream(new File("text111.txt")))) {
            int temp = dis.readInt();
             System.out.println(temp);
         }catch (IOException e){

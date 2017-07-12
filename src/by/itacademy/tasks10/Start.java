@@ -32,7 +32,8 @@ public class Start {
         System.out.println("==========================================");
         System.out.println("Задача 5: \n Вывести количество слов.");
         System.out.println("Количество слов в тексте: " + Task105.task105());
-
+        System.out.println("==========================================");
+        System.out.println("Задача 6: \n Убрать повторяющиеся.");
         Task106.task106();
 
     }

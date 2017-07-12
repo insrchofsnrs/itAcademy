@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by Evgeni on 05.07.17.
  */
-class Task81 {
+public class Task81 {
     public static void task81() {
         System.out.println("===================================");
         System.out.println("Задание 1: \n Отсеять оценки");
