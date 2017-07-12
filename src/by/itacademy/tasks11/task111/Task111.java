@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
  */
 public class Task111 {
     public static void task111() {
-        try (FileInputStream fis = new FileInputStream("by"+File.separator+"itacademy"+File.separator + "text111.txt")) {
+        try (FileInputStream fis = new FileInputStream("d://text.txt")) {
             int i= -1;
             while ((i=fis.read()) != -1){
                 System.out.print((char)i);
