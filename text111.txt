@@ -1,8 +1,2 @@
-<p>A {@code String} represents a string in the UTF-16 format
- * in which <em>supplementary characters</em> are represented by <em>surrogate
- * pairs</em> (see the section <a href="Character.html#unicode">Unicode
- * Character Representations</a> in the {@code Character} class for
- * more information).
- * Index values refer to {@code char} code units, so a supplementary
- * character uses two positions in a {@code String}.
- * <p>The {@code String} class provides methods for dealing with
+The123 Java Platform API Specification is defined by the doc111umentation comments in the source code and any documents marked as spec3213ifications reachable from those comments
+Notice that the speci1fication does not need to be entirely contained23 in doc co1112mments. In particular, speci3321fications that are lengthy are sometimes best formatted in a separate file and linked to from a doc comment

@@ -16,8 +16,8 @@ public class Task113 {
             String a = null;
             //String[] splitedText = null;
 
-            //while ((a=reader.readLine())!=null) {
-                String[] splitedText = reader.readLine().toLowerCase().split("\\p{P}?[ \\t\\n\\r]+");
+            while ((a=reader.readLine())!=null) {
+                String[] splitedText = a.toLowerCase().split("\\p{P}?[ \\t\\n\\r]+");
 
 
                 for (int i = 0; i < (splitedText.length -1); i++) {
@@ -25,7 +25,7 @@ public class Task113 {
                         System.out.println(splitedText[i] + " -- " + splitedText[i + 1]);
                     }
                 }
-            //}
+            }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

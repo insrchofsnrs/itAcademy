@@ -1,4 +1,4 @@
-<p>A {@code String} represents a string in the UTF-16 format
+A {@code String} represents a string in the UTF-16 format
  * in which <em>supplementary characters</em> are represented by <em>surrogate
   * pairs</em> (see the section <a href="Character.html#unicode">Unicode
    * Character Representations</a> in the {@code Character} class for
