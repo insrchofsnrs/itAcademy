@@ -1,2 +1,2 @@
 The123 Java Platform API Specification is defined by the doc111umentation comments in the source code and any documents marked as spec3213ifications reachable from those comments
-Notice that the speci1fication does not need to be entirely contained23 in doc co1112mments. In particular, speci3321fications that are lengthy are sometimes best formatted in a separate file and linked to from a doc comment
+Notice that the speci1fication does not need to be entirely contained23 in doc co1112mments. In particular, speci33 211fications that are lengthy1                       1 are sometimes best formatted in a separate file and linked to from a doc comment

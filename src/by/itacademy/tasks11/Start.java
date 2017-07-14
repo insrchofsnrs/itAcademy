@@ -4,6 +4,7 @@ import by.itacademy.tasks11.task111.Task111;
 import by.itacademy.tasks11.task112.Task112;
 import by.itacademy.tasks11.task113.Task113;
 import by.itacademy.tasks11.task114.Task114;
+import by.itacademy.tasks11.task115.Task115;
 import by.itacademy.tasks11.task116.Task116;
 
 /**
@@ -21,7 +22,7 @@ public class Start {
         System.out.println("\n ========================== Задача 4 ==========================");
         Task114.task114();
         System.out.println("\n ========================== Задача 5 ==========================");
-
+        Task115.task115();
         System.out.println("\n ========================== Задача 6 ==========================");
 
         //Task116.task116("d://");

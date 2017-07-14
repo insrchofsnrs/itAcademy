@@ -11,7 +11,10 @@ public class Task114 {
         String tmp;
         String max = " ";
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("text111.txt")))) {
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(
+                        new FileInputStream("text111.txt")))) {
+
             while ((tmp = reader.readLine()) != null) {
                 String[] splitedText = tmp.toLowerCase().split("[^0-9]+");
                 for (int i = 0; i < splitedText.length; i++) {
@@ -23,7 +26,6 @@ public class Task114 {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
         System.out.println(max);
     }
 }
