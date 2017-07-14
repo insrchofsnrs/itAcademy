@@ -14,9 +14,7 @@ public class Task116 {
         for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
         }
-       /* for (int i = 0; i < fle.length; i++) {
-            System.out.println(fle[i]);
-        }*/
+
 
 
     }

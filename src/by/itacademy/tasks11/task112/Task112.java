@@ -15,7 +15,7 @@ public class Task112 {
             String str = " ";
 
             while ((str = reader.readLine()) != null) {
-                String[] splitedText = str.toLowerCase().split("[,;:.!?\\s]+"); //"\\s*(\\s|,|!|\\.)\\s*"        "\\p{P}?[ \\t\\n\\r]+"
+                String[] splitedText = str.toLowerCase().split("[,;:.!?\\s]+");
                 System.out.println(splitedText.length);
                 for (int i = 0; i < splitedText.length; i++) {
 
@@ -24,14 +24,10 @@ public class Task112 {
                             System.out.println(splitedText[i]);
                         }
                     }
-
                 }
-
             }
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
-
-
     }
 }
