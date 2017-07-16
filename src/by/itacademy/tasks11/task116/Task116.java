@@ -10,7 +10,7 @@ public class Task116 {
     public static void task116(String path){
         File fl = new File(path);
         String[] str = fl.list();
-        File[] fle = fl.listFiles();
+
         for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
         }

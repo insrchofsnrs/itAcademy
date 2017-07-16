@@ -1,5 +1,6 @@
 package by.itacademy.tasks11.task115;
 
+import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class Task115 {
         for (int i = 0; i < 20; i++) {
             bytes[i] = random.nextInt(99)+1;
         }
-        try (FileOutputStream fos = new FileOutputStream("task115")) {
+        try (DataOutputStream fos = new DataOutputStream(new FileOutputStream("task115"))) {
             for (int i = 0; i < 20; i++) {
                 fos.write(bytes[i]);
             }

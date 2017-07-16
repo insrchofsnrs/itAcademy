@@ -6,6 +6,7 @@ import by.itacademy.tasks11.task113.Task113;
 import by.itacademy.tasks11.task114.Task114;
 import by.itacademy.tasks11.task115.Task115;
 import by.itacademy.tasks11.task116.Task116;
+import by.itacademy.tasks11.task117.Task117;
 
 /**
  * Created by Evgeni on 12.07.17.
@@ -25,5 +26,7 @@ public class Start {
         System.out.println("\n ========================== Задача 6 ==========================");
 
         Task116.task116("d://");
+        System.out.println("\n ========================== Задача 7 ==========================");
+        Task117.task117();
     }
 }
