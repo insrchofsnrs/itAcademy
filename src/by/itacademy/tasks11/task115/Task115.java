@@ -1,9 +1,6 @@
 package by.itacademy.tasks11.task115;
 
-import java.io.DataOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Random;
 
 /**
@@ -11,32 +8,42 @@ import java.util.Random;
  */
 
 //Data
-    //бинарный файл , принцип работы с файлами
+//бинарный файл , принцип работы с файлами
 public class Task115 {
-    public static void task115(){
+    public static void task115() {
         Random random = new Random();
         int[] bytes = new int[20];
         for (int i = 0; i < 20; i++) {
-            bytes[i] = random.nextInt(99)+1;
+            bytes[i] = random.nextInt(99) + 1;
+            System.out.print(bytes[i] + " ");
         }
+        System.out.println();
         try (DataOutputStream fos = new DataOutputStream(new FileOutputStream("task115"))) {
             for (int i = 0; i < 20; i++) {
-                fos.write(bytes[i]);
+                fos.writeInt(bytes[i]);
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        int i=0;
+        int i = 0;
         int count = 0;
-        int sum=0;
-        try (FileInputStream fis = new FileInputStream("task115")) {
-            while((i=fis.read())!=-1) {
+        int sum = 0;
+        try (DataInputStream fis = new DataInputStream(new FileInputStream("task115"))) {
+          /* while ((i = fis.readInt()) != null) {
+                i = fis.readInt();
+                System.out.print(i + " ");
                 count++;
-                sum+=i;
-            }
-            System.out.println(sum/count);
+                sum += i;
+                System.out.print(count+" ");
 
-        }catch (IOException ex){
+                System.out.print(sum+ " ");
+          }*/
+            System.out.println();
+            System.out.println(count);
+            System.out.println(sum);
+            System.out.println(sum / count);
+
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
