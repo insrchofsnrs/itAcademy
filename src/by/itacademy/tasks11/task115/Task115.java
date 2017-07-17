@@ -29,15 +29,19 @@ public class Task115 {
         int count = 0;
         int sum = 0;
         try (DataInputStream fis = new DataInputStream(new FileInputStream("task115"))) {
-          /* while ((i = fis.readInt()) != null) {
+            int total = fis.available();
+            int totalReads = total / 4;
+            boolean flag = true;
+            while (flag) {
                 i = fis.readInt();
                 System.out.print(i + " ");
                 count++;
                 sum += i;
-                System.out.print(count+" ");
+                System.out.print(count + " ");
 
-                System.out.print(sum+ " ");
-          }*/
+                System.out.print(sum + " ");
+                flag = false;
+            }
             System.out.println();
             System.out.println(count);
             System.out.println(sum);

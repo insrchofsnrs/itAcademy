@@ -10,7 +10,7 @@ import by.itacademy.tasks12.task122.Task122;
 public class Start {
     public static void main(String[] args) {
         System.out.println("\n ========================== Задача 1 ==========================");
-        Task121.task121(20);
+        Task121.task121(1);
 
         System.out.println("\n ========================== Задача 2 ==========================");
         Task122.task122();

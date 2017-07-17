@@ -7,10 +7,10 @@ import java.io.*;
  */
 public class Task121 {
     public static void task121(int sizeInMegabytes) {
-        sizeInMegabytes = sizeInMegabytes * 1024 * 1024;
+        sizeInMegabytes = sizeInMegabytes * 1024;
         StringBuilder str = new StringBuilder(sizeInMegabytes);
         for (int i = 0; i < str.capacity(); i++) {
-            str.append("i");
+            str.append("\u0289");
         }
         System.out.printf("Замеряем время записи в файл без буффера: ");
         long startTime1 = System.currentTimeMillis();
