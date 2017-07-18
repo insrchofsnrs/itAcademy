@@ -31,8 +31,13 @@ public class Task115 {
         try (DataInputStream fis = new DataInputStream(new FileInputStream("task115"))) {
             int total = fis.available();
             int totalReads = total / 4;
-            boolean flag = true;
-            while (flag) {
+            //boolean flag = true;
+            for (int j = 0; j < totalReads; j++) {
+                i = fis.readInt();
+                count++;
+                sum += i;
+            }
+            /*while (flag) {
                 i = fis.readInt();
                 System.out.print(i + " ");
                 count++;
@@ -41,10 +46,10 @@ public class Task115 {
 
                 System.out.print(sum + " ");
                 flag = false;
-            }
+            }*/
             System.out.println();
-            System.out.println(count);
-            System.out.println(sum);
+            System.out.println("count " + count);
+            System.out.println("sum " +sum);
             System.out.println(sum / count);
 
         } catch (IOException ex) {

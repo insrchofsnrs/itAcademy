@@ -7,6 +7,23 @@ import java.io.Serializable;
  */
 public class Notebook extends Computer implements Serializable {
     public Touchpad touch2;
+
+    public Notebook(int id, String name, Touchpad touch2, String color, int weight) {
+        super(id, name);
+        this.touch2 = touch2;
+        this.color = color;
+        this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Notebook{" +
+                "touch2=" + touch2 +
+                ", color='" + color + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
+
     private String color;
     transient int weight;
 

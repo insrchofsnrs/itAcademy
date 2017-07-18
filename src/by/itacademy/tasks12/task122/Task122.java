@@ -22,16 +22,17 @@ public class Task122 {
         }
 
         try (ObjectOutputStream oot = new ObjectOutputStream(new FileOutputStream("src\\by\\itacademy\\tasks12\\task122\\Task117_2.bin"))) {
-            Notebook note = new Notebook(001, "NOTEBOOK", "Red", 3);
+            Notebook note = new Notebook(001, "NOTEBOOK", new Touchpad(111, "Black"),"Red", 3); //создание объекта который будем сериализовать
             oot.writeObject(note);
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("src\\by\\itacademy\\tasks12\\task122\\Task117_2.bin"))) {
-            Notebook newNote = (Notebook) ois.readObject(); //вывести данные точпада.
+            Notebook newNote = (Notebook) ois.readObject(); //вывести данные тачпада.
             System.out.printf("id: %d, name: %s, colorNote: %s, Weight: %d \n",
                     newNote.getId(), newNote.getName(), newNote.getColor(), newNote.getWeight());
+            System.out.println(newNote.toString());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
