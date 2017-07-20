@@ -31,7 +31,7 @@ public class Task141 {
             array[i]=random.nextInt(98) + 1;
             System.out.print(array[i] + " ");
         }
-
+        System.out.println();
         System.out.println(IntStream.of(array).filter((a) -> (a % 2 !=0) && (a % 5 == 0)).average());
     }
 }

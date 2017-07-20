@@ -6,8 +6,7 @@ import lombok.Data;
 /**
  * Created by Evgeni on 19.07.17.
  */
-@Data
-@AllArgsConstructor
+
 public class Person {
 
     private String firstName;
