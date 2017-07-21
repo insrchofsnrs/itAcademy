@@ -15,8 +15,10 @@ public class Start {
 
         Thread t1=new Thread(scientist1);
         Thread t2 = new Thread(scientist2);
+        t0.start();
         t1.start();
         t2.start();
+        //(Thread) run() -> (s.ad();).start
 
     }
 }

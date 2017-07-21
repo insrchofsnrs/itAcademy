@@ -7,15 +7,9 @@ import java.util.Stack;
  * Created by Evgeni on 21.07.17.
  */
 public class Trash extends Thread {
-    @Override
-    public void run() {
-        factoryGenerateTrash(20);
-        for (int i = 0; i < 100; i++) {
-            factoryGenerateTrash(4);
-        }
-    }
 
-    public  static Stack<Parts> partsStack = new Stack<>();
+    public static boolean status = false;
+    public static Stack<Parts> partsStack = new Stack<>();
 
     public static void factoryGenerateTrash(int countGeneratedParts) {
         Random random = new Random();
@@ -51,7 +45,22 @@ public class Trash extends Thread {
             }
         }
     }
+//создать метод  выдающий детали а у ученого взять енам уже выданый свалкой
+    @Override
+    public void run() {
+        factoryGenerateTrash(20);
+        for (int i = 0; i < 100; i++) {
+            factoryGenerateTrash(4);
+            try {
+                Thread.sleep(100);
 
+                System.out.println(Trash.partsStack.empty());
+                //System.out.println(this.stockParts.entrySet());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     public Trash() {
 

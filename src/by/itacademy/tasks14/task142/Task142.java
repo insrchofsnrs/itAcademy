@@ -15,10 +15,13 @@ public class Task142 {
         list.add("Evgeny");
         list.add("New York");
         list.add("Vavilkin Evgeny");
+        list.add("Vavilkin Evgeny");
+        list.add("by.itacademy");
         list.add("by.itacademy");
 
         long count = list.stream()
                 .filter(s->s.length()>=8)
+                .distinct()
                 .count();
         System.out.println(count);
     }
