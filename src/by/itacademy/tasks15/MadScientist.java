@@ -17,7 +17,7 @@ public class MadScientist extends  Thread{
         for (int i = 0; i < 4; i++) {
            // if (!Trash.partsStack.empty()) {
                 if (!Trash.partsStack.empty()) {
-                    this.stockParts.put(Trash.partsStack.pop(), this.stockParts.get(Trash.partsStack) + 1);
+                    this.stockParts.put(Trash.partsStack.pop(), this.stockParts.get(Trash.partsStack) + 1); //проверить
                 } else {
                     this.stockParts.put(Trash.partsStack.pop(), 1);
                 }
