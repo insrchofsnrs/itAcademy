@@ -8,24 +8,39 @@ import java.util.Map;
  * Created by Evgeni on 21.07.17.
  */
 public class MadScientist extends Thread {
-    private String name;
+    private String nameScientist;
     private Integer countOfRobots = 0;
 
-    public HashMap<Parts, Integer> stockParts;
+    public String getNameScientist() {
+        return nameScientist;
+    }
 
-    public void roboticSlave() { //собираем 4 детали с помойки
-        while (true) {
-            if (!Trash.partsStack.empty()) {
-                if (this.stockParts.get(Trash.partsStack.pop()) != null) {
-                    this.stockParts.put(Trash.partsStack.pop(), this.stockParts.get(Trash.partsStack.pop()) + 1); //проверить
+    public Map<Parts, Integer> stockParts; //ключ это енамы, интежер - количество
+
+
+    //собираем 4 детали с помойки
+    public void roboticSlave() {
+        this.stockParts = new HashMap<>(); //при вызове метода на объекте создается мапа
+        Parts tempPart; //переменная енамов хранящая элемент который отдает метод getPart из класса Trash
+        while (Trash.status) {
+
+            tempPart = Trash.getPart(); //получаем верхний элемент из стэка
+
+            if (tempPart != null) { //проверяем есть ли элемент и есть ли в нашей мапе такой ключ
+                if (stockParts.containsKey(tempPart)) {
+
+                    this.stockParts.put(tempPart, this.stockParts.get(tempPart) + 1);//закидываем в мапу наш ключ енам и добавляем единицу к количеству
+
+                    System.out.println("Помощник подобрал: " + this.getNameScientist() + " "+ tempPart);
                 } else {
-                    this.stockParts.put(Trash.partsStack.pop(), 1);
+                    this.stockParts.put(tempPart, 1);
                 }
             }
         }
     }
 
-    public void collectRobots() { //собираем роботов
+    //собираем роботов
+    public void collectRobots() {
         Integer result;
         result = this.stockParts.entrySet().stream()
                 .map(v -> v.getValue())
@@ -35,21 +50,17 @@ public class MadScientist extends Thread {
     }
 
     public MadScientist(String name) {
-        this.name = name;
+        this.nameScientist = name;
     }
 
     @Override
     public void run() {
-        while(Trash.status) {
+        while (Trash.status) {
             this.roboticSlave();
 
-
-                System.out.println("Ночь  наступила");
-                //System.out.println(this.stockParts.entrySet());
-
-
+            //System.out.println(this.stockParts.entrySet());
         }
         this.collectRobots();
-        System.out.println("Собрано роботов " + this.countOfRobots);
+        System.out.println(this.getNameScientist() + " cобрал " + this.countOfRobots + " роботов ");
     }
 }
