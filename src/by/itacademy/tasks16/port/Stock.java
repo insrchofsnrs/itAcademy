@@ -1,5 +1,6 @@
 package by.itacademy.tasks16.port;
 
+import java.lang.reflect.Method;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -14,19 +15,25 @@ public class Stock {
 
 
 
-    public   synchronized void pushStock(){
+    public   synchronized void pushStock(int shipHold, String name){
         try {
             available.acquire();
-            if ((TOTAL_MAX_STOCK-stock)>= ship.shipHold){
-                stock+=ship.shipHold;
-                System.out.println("На склад выгружено из трюма "+ship.shipHold+" контейнеровю Теперь на складе "+stock+"/100 контейнеров.");
+            if ((TOTAL_MAX_STOCK-stock)>= shipHold){
+                stock+=shipHold;
+                System.out.println("На склад выгружено из трюма "+name+ " "+shipHold+" контейнеров. Теперь на складе "+stock+"/100 контейнеров.");
             } else{
-                System.out.printf("На складе нет места. Корабль %s уплывает.", ship.getShipName());
+                System.out.printf("На складе нет места. Корабль %s уплывает.", name);
                 System.out.println();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        available.release();
 
 
     }

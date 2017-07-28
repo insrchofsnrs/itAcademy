@@ -1,5 +1,7 @@
 package by.itacademy.tasks16.port;
 
+import java.lang.reflect.Method;
+
 /**
  * Created by Evgeni on 26.07.17.
  */
@@ -29,6 +31,6 @@ public class Ship implements Runnable  {
 
     @Override
     public void run() {
-        this.stock.pushStock();
+        this.stock.pushStock(this.shipHold, getShipName());
     }
 }
