@@ -6,9 +6,8 @@ import java.util.Random;
 /**
  * Created by Evgeni on 26.07.17.
  */
-public class Ship implements Runnable  {
+public class Ship implements Runnable {
     Stock stock;
-
 
 
     int shipHold;
@@ -25,7 +24,7 @@ public class Ship implements Runnable  {
         return shipName;
     }
 
-    public synchronized void getGoods (){
+    public synchronized void getGoods() {
 
 
     }
@@ -34,11 +33,9 @@ public class Ship implements Runnable  {
     public void run() {
 
 
+        Random random = new Random();
 
-
-        Random random  = new Random();
-
-        switch (random.nextInt(2)+1){
+        switch (random.nextInt(2) + 1) {
             case 1:
                 this.stock.pushStock(this.shipHold, getShipName());
                 break;
