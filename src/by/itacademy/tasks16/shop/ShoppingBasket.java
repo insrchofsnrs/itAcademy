@@ -8,8 +8,9 @@ import java.util.Random;
  * Created by Smile on 01.08.2017.
  */
 public class ShoppingBasket {
-    Good goods;
+    Good good;
     Map<Good, Integer> basket = new HashMap();
+    User user;
 
     public Good generateRandomGoods() {
         Random random = new Random();
@@ -45,6 +46,19 @@ public class ShoppingBasket {
                 break;
         }
         return result;
+    }
+
+    public void setGoods (){
+        good = generateRandomGoods();
+        if (basket.containsKey(good)) {
+
+            this.basket.put(good, this.basket.get(good) + 1);//закидываем в мапу наш ключ енам и добавляем единицу к количеству
+
+            System.out.println("Покупатель : " + this.user.getName() + " "+ good);
+        } else {
+            this.basket.put(good, 1);
+            System.out.println("Покупатель : " + this.user.getName() + " "+ good);
+        }
     }
 
 
