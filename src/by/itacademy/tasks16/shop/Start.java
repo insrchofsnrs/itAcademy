@@ -7,11 +7,12 @@ import java.util.Random;
  */
 public class Start {
     public static void main(String[] args) {
-        User user1 = new User("Vasya", new ShoppingBasket());
+        User user1 = new User("vasya", new ShoppingBasket());
         Random random = new Random();
-        for (int i = 0; i < random.nextInt(9); i++) {
-            user1.getShoppingBasket().setGoods();
+        for (int i = 0; i < random.nextInt(20); i++) {
+            user1.setGoods();
         }
+        System.out.println(user1.shoppingBasket.basket.entrySet());
     }
 
 }
