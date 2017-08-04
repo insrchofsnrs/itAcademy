@@ -7,25 +7,15 @@ import java.util.concurrent.Semaphore;
  */
 public class CashBox implements Runnable{
     private final int MAX_AVAILABLE = 3;
-    private final Semaphore available = new Semaphore(MAX_AVAILABLE);
+     final Semaphore available = new Semaphore(MAX_AVAILABLE, true);
+    User user;
 
-    public void calculateUser(User user){
-        try {
-            available.acquire();
-            user.userGoShopping(20);
-           int a = user.shoppingBasket.basket.entrySet().stream()
-                    .map(p->p.getValue())
-                    .reduce((p1,p2)->p1+p2)
-                   .orElse(0);
-            System.out.println("Значение колличество всех элементов в коллекции " +a);
-        } catch (InterruptedException e) {
-            System.out.println("что-то в потоке пошло не так (покупатель забыл пинкод)");
-        }
-    }
+
+
 
     @Override
     public void run() {
-
+        System.out.println("Касса работает");
     }
 }
 

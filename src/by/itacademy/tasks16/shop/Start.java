@@ -7,12 +7,22 @@ import java.util.Random;
  */
 public class Start {
     public static void main(String[] args) {
-        User user1 = new User("vasya", new ShoppingBasket());
-        Random random = new Random();
-        for (int i = 0; i < random.nextInt(20); i++) {
-            user1.setGoods();
-        }
-        System.out.println(user1.shoppingBasket.basket.entrySet());
-    }
 
+        CashBox cashBox = new CashBox();
+        new Thread(new User("VASYA 1", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 2", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 3", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 4", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 5", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 5", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 6", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 7", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 8", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 9", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 10", new ShoppingBasket(),cashBox)).start();
+        new Thread(new User("VASYA 11", new ShoppingBasket(),cashBox)).start();
+
+
+
+    }
 }
