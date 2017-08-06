@@ -1,2 +1,66 @@
-The123 Java Platform API Specification is defined by the doc111umentation comments in the source code and any documents marked as spec3213ifications reachable from those comments
-Notice that the speci1fication does not need to be entirely contained23 in doc co1112mments. In particular, speci33 211fications that are lengthy1                       1 are sometimes best formatted in a separate file and linked to from a doc comment
+CREATE TABLE `table_countries` (
+  `c_name` varchar(20) DEFAULT NULL,
+  `c_count_mln` int(11) DEFAULT NULL,
+  `c_area` int(11) DEFAULT NULL,
+  `c_language` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO table_countries (c_name, c_count_mln,c_area, c_language)
+VALUES
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR'),
+  ('Бразилия', 123, 2200, 'BR');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE `table_countries` (
+  `c_name` varchar(20) DEFAULT NULL,
+  `c_count_mln` int(11) DEFAULT NULL,
+  `c_area` int(11) DEFAULT NULL,
+  `c_language` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  INSERT INTO table_countries (c_name, c_count_mln,c_area, column_language)
+VALUES(`Бразилия`, 123, 2200, `BR`)
+('Бразилия', 123, 2200, 'BR')
+(`Бразилия`, 123, 2200, `BR`)
+(`Бразилия`, 123, 2200, `BR`)
+(`Бразилия`, 123, 2200, `BR`)
+
+
+  SELECT * FROM table_countries
+    WHERE c_count_mln>50
+
+  SELECT * FROM table_countries
+    ORDER BY c_count_mln
+
+SELECT * FROM table_countries
+ORDER BY c_area ASC LIMIT 5;
+
+SELECT * FROM table_countries
+ORDER BY c_area ASC ,SUM(c_count_mln) LIMIT 5 ;
+
+DELETE FROM table_countries
+WHERE c_count_mln=(SELECT MAX(c_count_mln))
