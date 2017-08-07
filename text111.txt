@@ -7,60 +7,42 @@ CREATE TABLE `table_countries` (
 
 INSERT INTO table_countries (c_name, c_count_mln,c_area, c_language)
 VALUES
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR'),
-  ('Бразилия', 123, 2200, 'BR');
+  ('Бразилия1', 111, 1, 'BR'),
+  ('Бразилия2', 3333, 12, 'BR'),
+  ('Бразилия3', 31, 13, 'BR'),
+  ('Бразилия4', 13, 14, 'BR'),
+  ('Бразилия5', 12, 15, 'BR'),
+  ('Бразилия6', 23, 213, 'BR'),
+  ('Бразилия7', 3, 2200, 'BR'),
+  ('Бразилия8', 1, 31, 'BR'),
+  ('Бразилия9', 123, 111, 'BR'),
+  ('Бразилия10', 112, 412, 'BR');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE TABLE `table_countries` (
-  `c_name` varchar(20) DEFAULT NULL,
-  `c_count_mln` int(11) DEFAULT NULL,
-  `c_area` int(11) DEFAULT NULL,
-  `c_language` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-  INSERT INTO table_countries (c_name, c_count_mln,c_area, column_language)
-VALUES(`Бразилия`, 123, 2200, `BR`)
-('Бразилия', 123, 2200, 'BR')
-(`Бразилия`, 123, 2200, `BR`)
-(`Бразилия`, 123, 2200, `BR`)
-(`Бразилия`, 123, 2200, `BR`)
-
-
-  SELECT * FROM table_countries
+ SELECT * FROM table_countries
     WHERE c_count_mln>50
 
   SELECT * FROM table_countries
     ORDER BY c_count_mln
 
-SELECT * FROM table_countries
-ORDER BY c_area ASC LIMIT 5;
-
-SELECT * FROM table_countries
-ORDER BY c_area ASC ,SUM(c_count_mln) LIMIT 5 ;
+  SELECT SUM(c_count_mln) AS c_count_mln
+  FROM (SELECT *
+        FROM table_countries
+        ORDER BY c_area DESC LIMIT 5) q ;
 
 DELETE FROM table_countries
-WHERE c_count_mln=(SELECT MAX(c_count_mln))
+WHERE c_count_mln=(SELECT MAX(c_count_mln) FROM (SELECT * From table_countries) AS S)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
